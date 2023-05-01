@@ -1,0 +1,28 @@
+/**
+* * Section Search
+*/
+.section-search {
+    padding-top: 80px;
+
+    .section__inner {
+
+    }
+}
+
+/**
+* * Search Form
+*/
+.search-form {
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    border-radius: 10px;
+    
+    input {
+        width: 100%;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+}

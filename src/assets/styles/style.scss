@@ -1,0 +1,33 @@
+/**
+* * Reset
+*/
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/**
+* * Shell
+*/
+.shell {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/**
+* * Buttons
+*/
+.btn {
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn--search {
+    background: transparent;
+    border: none;
+    padding: 10px;
+}
