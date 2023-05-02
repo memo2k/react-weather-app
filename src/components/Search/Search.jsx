@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./search.scss";
 
-const Search = () => {
+const Search = ({ onSearchChange }) => {
+  const [searchInput, setSearchInput] = useState('');
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    onSearchChange(searchInput);
+  }
+
   return (
     <section className="section-search">
       <div className="shell">
@@ -10,9 +17,11 @@ const Search = () => {
             <input
               type="text"
               placeholder="Search location"
+              value={searchInput}
+              onChange={(e) => setSearchInput(e.target.value)}
             />
 
-            <button className="btn btn--search">
+            <button onClick={handleClick} className="btn btn--search">
               <i className="fa-solid fa-magnifying-glass"></i>
             </button>
           </form>
