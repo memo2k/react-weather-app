@@ -1,0 +1,48 @@
+/**
+* * Forecast
+*/
+.forecast {
+    padding-top: 80px;
+}
+
+/**
+* * Card Forecast
+*/
+.card-forecast {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    .card__left, .card__rain {
+        display: flex;
+        align-items: center;
+    }
+
+    .card__day {
+        width: 150px;
+    }
+
+    .card__temperature {
+        width: 350px;
+        display: flex;
+        align-items: center;
+
+        p {
+            font-size: 30px;
+            margin-left: 20px;
+        }
+    }
+
+    .card__rain p {
+        margin-left: 5px;
+    }
+}
+
+/**
+* * Accordion
+*/
+.AccordionItem + .AccordionItem {
+    margin-top: 20px;
+}
