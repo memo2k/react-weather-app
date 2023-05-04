@@ -20,7 +20,8 @@ const Forecast = ({ data }) => {
         <div className="forecast__inner">
           <Accordion>
             {data.map((item, idx) => {
-              return <AccordionItem key={idx}>
+              if (item.weatherIcon != null) {
+              return (<AccordionItem key={idx}>
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <div className="card-forecast">
@@ -41,16 +42,17 @@ const Forecast = ({ data }) => {
                       </div>
 
                       <div className="card__rain">
-                        <i className="fa-solid fa-droplet fa-lg"></i>
-                        <p>0%</p>
+                        <i className="fa-solid fa-cloud fa-lg"></i>
+                        <p>{item.clouds}%</p>
                       </div>
                     </div>
                   </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
-
+                  
                 </AccordionItemPanel>
               </AccordionItem>
+              )}
             })}
           </Accordion>
         </div>
