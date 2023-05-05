@@ -22,7 +22,7 @@ const Search = ({ onSearchChange }) => {
             />
 
             <button onClick={handleClick} className="btn btn--search">
-              <i className="fa-solid fa-magnifying-glass"></i>
+              <i className="fa-solid fa-magnifying-glass fa-xl"></i>
             </button>
           </form>
         </div>
