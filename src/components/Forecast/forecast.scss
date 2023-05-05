@@ -2,7 +2,7 @@
 * * Forecast
 */
 .forecast {
-    padding-top: 80px;
+    padding: 80px 0;
 }
 
 /**
@@ -14,8 +14,19 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(1px);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+    animation: forecast-load 1s ease-in;
 
-    .card__left, .card__rain {
+    &:hover {
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    .card__left,
+    .card__rain {
         display: flex;
         align-items: center;
     }
@@ -45,4 +56,14 @@
 */
 .AccordionItem + .AccordionItem {
     margin-top: 20px;
+}
+
+@keyframes forecast-load {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

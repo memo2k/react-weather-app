@@ -2,7 +2,7 @@
 * * Section Search
 */
 .section-search {
-    padding-top: 80px;
+    padding-top: 30px;
 
     .section__inner {
 
@@ -13,16 +13,30 @@
 * * Search Form
 */
 .search-form {
-    background-color: rgb(238, 238, 238);
+    background-color: rgba(0, 0, 0, 0.3);
     display: flex;
     border-radius: 10px;
+    transition: .2s;
     
     input {
         width: 100%;
         outline: none;
         border: none;
         background-color: transparent;
-        padding: 10px 15px;
-        font-size: 16px;
+        padding: 15px 15px;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    input::placeholder {
+        color: #cdcdcd;
+    }
+
+    &:focus-within {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    i {
+        color: #cdcdcd;
     }
 }
