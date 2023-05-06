@@ -11,7 +11,7 @@ function App() {
 
   // Fetch weather data
   const fetchWeather = (input) => {
-    fetch(`http://localhost:5000/weather?q=${input}`)
+    fetch(`/api/weather?q=${input}`)
       .then((response) => {
         return response.json();
       })
@@ -37,7 +37,7 @@ function App() {
       });
 
     // Fetch forecast data
-    fetch(`http://localhost:5000/forecast?q=${input}`)
+    fetch(`/api/forecast?q=${input}`)
       .then((response) => {
         return response.json();
       })
