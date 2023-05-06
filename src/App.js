@@ -66,8 +66,6 @@ function App() {
             );
 
             const description = dayForecast?.weather[0].description.charAt(0).toUpperCase() + dayForecast?.weather[0].description.slice(1);
-            const humidity = dayForecast?.weather[0].main?.humidity;
-            const windSpeed = dayForecast?.weather[0].wind?.speed;
             const clouds = dayForecast?.clouds?.all;
             const weatherIcon = dayForecast?.weather[0].icon;
 
@@ -76,10 +74,8 @@ function App() {
               minTemp: minTemp,
               maxTemp: maxTemp,
               description: description,
-              humidity: humidity,
-              windSpeed: windSpeed,
               weatherIcon: weatherIcon,
-              clouds: clouds
+              clouds: clouds,
             }
           });
 
