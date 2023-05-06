@@ -7,7 +7,6 @@
     .weather__inner {
         padding: 20px;
         background: rgba(0, 0, 0, 0.2);
-        backdrop-filter: blur(1px);
         border-radius: 10px;
         animation: weather-load 1s ease-in-out;
     }
