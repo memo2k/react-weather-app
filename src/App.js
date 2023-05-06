@@ -9,6 +9,7 @@ function App() {
   const [forecastData, setForecastData] = useState(null);
   const [bgColor, setBgColor] = useState(null);
 
+  // Fetch weather data
   const fetchWeather = (input) => {
     fetch(`http://localhost:5000/weather?q=${input}`)
       .then((response) => {
@@ -17,20 +18,16 @@ function App() {
       .then((data) => {
         const weatherDescription = data.weather[0].description;
 
-        if (weatherDescription === "light rain") {
-          setBgColor("gray-bg");
-        } else if (weatherDescription === "few clouds") {
+        // Set background color based on weather description
+        if (
+          weatherDescription === "few clouds" || 
+          weatherDescription === "scattered clouds" || 
+          weatherDescription === "broken clouds" || 
+          weatherDescription === "clear sky"
+        ) {
           setBgColor("blue-bg");
-        } else if (weatherDescription === "scattered clouds" ||
-          weatherDescription === "broken clouds") {
-          setBgColor("blue-bg");
-        } else if (weatherDescription === "rain" ||
-          weatherDescription === "thunderstorm") {
-          setBgColor("gray-bg");
-        } else if (weatherDescription === "overcast clouds") {
-          setBgColor("gray-bg");
-        } else if (weatherDescription === "clear sky") {
-          setBgColor("blue-bg");
+        } else {
+          setBgColor("gray-bg")
         }
 
         setCurrentWeatherData(data);
@@ -39,11 +36,13 @@ function App() {
         console.error(err);
       });
 
-      fetch(`http://localhost:5000/forecast?q=${input}`)
+    // Fetch forecast data
+    fetch(`http://localhost:5000/forecast?q=${input}`)
       .then((response) => {
         return response.json();
       })
       .then((data) => {
+        // Group data by date
         const groupedData = data.list.reduce((acc, forecast) => {
           const date = forecast.dt_txt.split(' ')[0];
           if (acc[date]) {
@@ -54,6 +53,7 @@ function App() {
           return acc;
         }, {});
 
+        // Processed forecast data
         const processedData = Object.keys(groupedData)
           .filter((date) => date !== data.list[0].dt_txt.split(' ')[0])
           .map(date => {
@@ -86,10 +86,12 @@ function App() {
       });
   };
 
+  // Fetch initial data
   useEffect(() => {
     fetchWeather("Sofia");
   }, []);
 
+  // Fetch data on search
   const handleSearchChange = (input) => {
     fetchWeather(input);
   }
