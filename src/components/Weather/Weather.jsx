@@ -8,14 +8,12 @@ const Weather = ({ data }) => {
         <div className="weather__inner">
           <div className="weather__top">
             <h1>{data.name}, {data.sys.country}</h1>
-
-            {/* <h3>Monday 28 August</h3> */}
           </div>
 
           <div className="weather__bottom">
             <div className="weather__temperature">
               <div className="weather__temperature-icon">
-                <img src={`/icons/${data.weather[0].icon}.png`} alt="" width="200" height="200" />
+                <img src={`/icons/${data.weather[0].icon}.png`} alt="" />
               </div>
 
               <div className="weather__temperature-details">
@@ -40,7 +38,7 @@ const Weather = ({ data }) => {
                   <div className="card-weather">
                     <div className="card__details">
                       <h3>{Math.round(data.wind.speed * 3.6)} km/h</h3>
-                      <p>Wind Speed</p>
+                      <p>Wind speed</p>
                     </div>
                   </div>
                 </div>
