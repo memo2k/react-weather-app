@@ -52,6 +52,44 @@
             margin-right: 10px;
         }
     }
+
+    @media (max-width: 1024px) {
+        display: block;
+
+        .card__left {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .card__day {
+            width: 100%;
+        }
+
+        .card__temperature {
+            margin: 0 auto;
+        }
+
+        .card__image {
+            margin: 0;
+        }
+        
+        .card__clouds {
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .card__temperature {
+            display: block;
+            width: 100%;
+            
+            p {
+                margin: 0;
+            };
+        }
+    }
 }
 
 @keyframes forecast-load {

@@ -3,7 +3,7 @@
 */
 .weather {
     padding-top: 80px;
-
+    
     .weather__inner {
         padding: 20px;
         background: rgba(0, 0, 0, 0.2);
@@ -11,15 +11,14 @@
         border-radius: 10px;
         animation: weather-load 1s ease-in-out;
     }
-
+    
     .weather__bottom {
         padding-top: 60px;
         display: flex;
         width: 100%;
         justify-content: center;
-        height: 250px;
     }
-
+    
     .weather__temperature {
         display: flex;
         align-items: center;
@@ -27,21 +26,65 @@
         border-right: 1px solid lightgray;
         width: 50%;
 
+        .weather__temperature-icon {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+        
         h1 {
             font-size: 80px;
         }
-
+        
         p {
             font-size: 22px;
         }
     }
-
+    
     .weather__details {
         display: flex;
         justify-content: center;
         width: 50%;
     }
+    
+    @media (max-width: 1024px) {
+        .weather__bottom {
+            display: block;
+            margin: 0 auto;
+        }   
 
+        .weather__temperature {
+            border-right: none;
+            border-bottom: 1px solid lightgray;
+            width: 80%;
+            margin: 0 auto;
+
+            h1 {
+                font-size: 50px;
+            }
+        }
+
+        .weather__details {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .weather__temperature {
+            display: block;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .weather__temperature-icon {
+            margin: 0 auto;
+        }
+    }
 }
 
 /**
@@ -54,6 +97,10 @@
 
     .card__details h3 {
         margin-bottom: 3px;
+    }
+
+    @media (max-width: 1024px) {
+        margin-top: 60px;
     }
 }
 
