@@ -17,26 +17,21 @@
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(1px);
     border-radius: 10px;
-    cursor: pointer;
     transition: .4s;
     animation: forecast-load 1s ease-in;
 
-    &:hover {
-        background: rgba(0, 0, 0, 0.3);
-    }
-
     .card__left,
-    .card__rain {
+    .card__clouds {
         display: flex;
         align-items: center;
     }
 
     .card__day {
-        width: 150px;
+        width: 170px;
     }
 
     .card__temperature {
-        width: 350px;
+        width: 380px;
         display: flex;
         align-items: center;
 
@@ -46,16 +41,17 @@
         }
     }
 
-    .card__rain p {
-        margin-left: 5px;
+    .card__image {
+        margin-right: 20px;
     }
-}
 
-/**
-* * Accordion
-*/
-.AccordionItem + .AccordionItem {
-    margin-top: 20px;
+    .card__clouds {
+        width: 80px;
+
+        i {
+            margin-right: 10px;
+        }
+    }
 }
 
 @keyframes forecast-load {
