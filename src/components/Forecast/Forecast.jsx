@@ -5,6 +5,8 @@ const weekDaysList = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'S
 
 const Forecast = ({ data }) => {
   const dayInAWeek = new Date().getDay();
+
+  // Get an array of the forecast days starting from the current day
   const forecastDays = weekDaysList.slice(dayInAWeek, weekDaysList.length).concat(weekDaysList.slice(0, dayInAWeek));
 
   return (
