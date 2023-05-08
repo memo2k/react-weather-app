@@ -9,4 +9,4 @@ A weather application built with ReactJS and OpenWeatherMap API that allows user
 - Sass / Scss
 - OpenWeatherMap API
 
-[Screenshot](https://github.com/memo2k/react-weather-app/blob/master/src/assets/weatherapp.png)
+![Screenshot](https://github.com/memo2k/react-weather-app/blob/master/src/assets/weatherapp.png)
