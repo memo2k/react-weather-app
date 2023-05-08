@@ -22,7 +22,6 @@ function App() {
         if (
           weatherDescription === "few clouds" || 
           weatherDescription === "scattered clouds" || 
-          weatherDescription === "broken clouds" || 
           weatherDescription === "clear sky"
         ) {
           setBgColor("blue-bg");
