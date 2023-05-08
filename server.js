@@ -10,7 +10,7 @@ const weatherApiKey = process.env.REACT_APP_WEATHER_API_KEY;
 
 const app = express();
 
-app.use(cors());
+app.use(express.static('build'));
 
 app.get('/api/weather', async (req, res) => {
     const apiUrl = `${weatherUrl}/weather?q=${req.query.q}&appid=${weatherApiKey}&units=metric`;
