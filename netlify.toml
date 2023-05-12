@@ -1,6 +1,5 @@
 [build]
     functions = "functions"
-    publish = "build"
 [[redirects]]
     from = "/api/*"
     to = "/.netlify/functions/:splat"
